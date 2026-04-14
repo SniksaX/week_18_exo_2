@@ -18,7 +18,7 @@ class LogRequestMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $browser = $request->header('User-Agent');
-        // Log::info("Navigateur utilisé : " . $browser);
+        Log::info("Navigateur utilisé : " . $browser);
         return $next($request);
     }
 }
