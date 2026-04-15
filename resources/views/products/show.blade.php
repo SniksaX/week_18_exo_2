@@ -21,7 +21,7 @@
                             </a> -->
 
                     <div class="mt-4">
-                        @can('manage-product', $product)
+                        @can('update', $product)
                             <a href="{{ route('products.edit', $product) }}"
                                class="text-blue-600 underline">
                                 Modifier le produit
