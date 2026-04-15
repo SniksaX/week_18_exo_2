@@ -63,4 +63,12 @@ class ProductPolicy
     {
         return $user->id === $product->user_id;;
     }
+
+    public function before(User $user, string $ability): ?bool
+    {
+        if ($user->hasRole('admin')) {
+            return true;
+        }
+        return null;
+    }
 }
